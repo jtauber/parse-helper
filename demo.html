@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Parse Helper Demo</title>
+        <style>
+            body {
+                font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+            }
+            input[type=text] {
+                font-size: 14pt;
+            }
+            .parse-attribute a {
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+                color: white;
+                font-weight: 600;
+                padding: 1px 6px 2px;
+                background: #CCC;
+                line-height: 18pt;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            .parse-attribute a:hover {
+                background: #999;
+            }
+            .parse-attribute .selected {
+                background: #6C9;
+            }
+            .parse-attribute .selected:hover {
+                background: #8EB;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Parse Helper</h1>
+        <h2>CCAT Parse</h2>
+        
+        <form>
+            <input type="text" id="parse-1" />
+        </form>
+        
+        <div id="parse-helper-1"></div>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+        <script src="parse-helper.js" type="text/javascript"></script>
+        <script src="ccat-helper.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function() {
+                hookUpHelper("#parse-helper-1", "#parse-1", ccatCreateControls, ccatToggleAttributes, ccatGenerateParseCode);
+            });
+        </script>
+    </body>
+</html>

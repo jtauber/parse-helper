@@ -1,0 +1,26 @@
+parse-helper.js is a javascript library for building controls for assisting
+in the entry of parsing codes during linguistic annotation.
+
+The idea is that the controls could be attached to any text input expecting
+a parse code to be entered.
+
+It currently includes support for the CCAT parsing codes for Ancient Greek
+(as used by the MorphGNT project). Other parsing schemes are planned.
+
+The CCAT support includes filtering available attributes based on
+part-of-speech selected (and choice of verbal mood can further refine the
+options).
+
+At the moment there is no support for going the other way and taking an
+existing parse code as a string and correctly showing the individual attribute 
+values selected. This will be coming soon.
+
+This project is at a very early stage and I'm sure the code could be improved
+a lot. I'm no Javascript expert.
+
+I'm grateful to Weston Ruter for his assistance in generalizing some of the
+Javascript.
+
+
+James Tauber
+jtauber@jtauber.com
