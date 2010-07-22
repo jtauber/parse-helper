@@ -39,13 +39,12 @@
         </form>
         
         <div id="parse-helper-1"></div>
-        
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
         <script src="parse-helper.js" type="text/javascript"></script>
         <script src="ccat-helper.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(function() {
-                hookUpHelper("#parse-helper-1", "#parse-1", ccatCreateControls, ccatToggleAttributes, ccatGenerateParseCode);
+                hookUpHelper("#parse-helper-1", "#parse-1", CCATHelper);
             });
         </script>
     </body>

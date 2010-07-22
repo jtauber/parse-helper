@@ -184,3 +184,9 @@ function ccatGenerateParseCode(el) {
     
     return parse;
 }
+
+CCATHelper = {
+    createControls: ccatCreateControls,
+    toggleAttributes: ccatToggleAttributes,
+    generateParseCode: ccatGenerateParseCode,
+}

@@ -32,9 +32,9 @@ function displayAttributes(el, on, off) {
     })
 }
 
-function hookUpHelper(selector1, selector2, createControls, toggleAttributes, generateParseCode) {
+function hookUpHelper(selector1, selector2, helper) {
     
-    createControls(selector1);
+    helper.createControls(selector1);
     
     $(selector1).find(".parse-attribute a").hover(
         function() {
@@ -48,8 +48,8 @@ function hookUpHelper(selector1, selector2, createControls, toggleAttributes, ge
         $(this).toggleClass("selected");
         $(this).siblings().not(this).removeClass("selected");
         
-        toggleAttributes(this);
-        $(selector2).val(generateParseCode(this));
+        helper.toggleAttributes(this);
+        $(selector2).val(helper.generateParseCode(this));
         
         return false;
     });
