@@ -1,6 +1,6 @@
 
 CCATHelper = {
-    createControls: function ccatCreateControls(selector) {
+    createControls: function(selector) {
         $(selector).append(makeParseAttribute("pos", [
             ["adjective", "A-"],
             ["conjunction", "C-"],
