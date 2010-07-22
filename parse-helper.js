@@ -22,6 +22,10 @@ function getValue(el, selector, defaultValue) {
     return v;
 }
 
+function setValue(selector1, name, value) {
+    $(selector1).find(".parse-attribute." + name + " a:contains('"+ value + "')").addClass("selected");
+}
+
 function displayAttributes(el, on, off) {
     $.each(off, function(i, selector) {
         $(el).parent().siblings(selector).children(".selected").removeClass("selected");
@@ -53,4 +57,10 @@ function hookUpHelper(selector1, selector2, helper) {
         
         return false;
     });
+    
+    $(selector2).keyup(function() {
+        $(selector1).find(".parse-attribute a").removeClass("selected");
+        helper.toggleFromParseCode(selector1, selector2);
+    });
+
 }

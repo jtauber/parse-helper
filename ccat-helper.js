@@ -185,8 +185,24 @@ function ccatGenerateParseCode(el) {
     return parse;
 }
 
+function ccatToggleFromParseCode(selector1, selector2) {
+    
+    var parse = $(selector2).val();
+    
+    setValue(selector1, "pos", parse[0] + parse[1]);
+    setValue(selector1, "person", parse[3]);
+    setValue(selector1, "tense", parse[4]);
+    setValue(selector1, "voice", parse[5]);
+    setValue(selector1, "mood", parse[6]);
+    setValue(selector1, "case", parse[7]);
+    setValue(selector1, "number", parse[8]);
+    setValue(selector1, "gender", parse[9]);
+    setValue(selector1, "degree", parse[10]);
+}
+
 CCATHelper = {
     createControls: ccatCreateControls,
     toggleAttributes: ccatToggleAttributes,
     generateParseCode: ccatGenerateParseCode,
+    toggleFromParseCode: ccatToggleFromParseCode,
 }
