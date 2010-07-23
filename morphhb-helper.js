@@ -49,7 +49,7 @@ MorphHBHelper = {
         $(selector).append(makeParseAttribute("suffix-type", [
             ["directional he", "d"],
             ["paragogic he", "h"],
-            ["paragigic num", "n"],
+            ["paragogic num", "n"],
             ["pronominal", "p"],
         ]));
         
