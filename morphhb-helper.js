@@ -202,19 +202,53 @@ MorphHBHelper = {
         }
     },
     generateParseCode: function(el) {
-        // var pos = getValue(el, ".pos", "??");
-        // var person = getValue(el, ".person", "-");
-        // var tense = getValue(el, ".tense", "-");
-        // var voice = getValue(el, ".voice", "-");
-        // var mood = getValue(el, ".mood", "-");
-        // var kase = getValue(el, ".case", "-");
-        // var number = getValue(el, ".number", "-");
-        // var gender = getValue(el, ".gender", "-");
-        // var degree = getValue(el, ".degree", "-");
-        // 
-        // var parse = pos + " " + person + tense + voice + mood + kase + number + gender + degree;
-        // 
-        // return parse;
+        var pos = getValue(el, ".pos", "?");
+        var adjective_type = getValue(el, ".adjective-type", "?");
+        var conjunction_type = getValue(el, ".conjunction-type", "?");
+        var noun_type = getValue(el, ".noun-type", "?");
+        var pronoun_type = getValue(el, ".pronoun-type", "?");
+        var preposition_type = getValue(el, ".preposition-type", "?");
+        var suffix_type = getValue(el, ".suffix-type", "?");
+        var particle_type = getValue(el, ".particle-type", "?");
+        var aspect = getValue(el, ".aspect", "?");
+        var definiteness = getValue(el, ".definiteness", "?");
+        var kase = getValue(el, ".case", "?");
+        var person = getValue(el, ".person", "?");
+        var gender = getValue(el, ".gender", "?");
+        var number = getValue(el, ".number", "?");
+        var state = getValue(el, ".state", "?");
+        
+        var parse;
+        
+        if (pos == "A") {
+            parse = pos + adjective_type + gender + number + state;
+        }
+        else if (pos == "C") {
+            parse = pos + conjunction_type;
+        }
+        else if (pos == "D") {
+            parse = pos;
+        }
+        else if (pos == "N") {
+            parse = pos + noun_type + gender + number + state;
+        }
+        else if (pos == "P") {
+            parse = pos + pronoun_type + kase + person + gender + number + state;
+        }
+        else if (pos == "R") {
+            parse = pos + preposition_type + definiteness;
+        }
+        else if (pos == "S") {
+            parse = pos + suffix_type + gender + number + state;
+        }
+        else if (pos == "T") {
+            parse = pos + particle_type;
+        }
+        else if (pos == "V") {
+            parse = pos + stem + aspect + person + gender + number + state;
+        }
+        
+        return parse;
     },
     toggleFromParseCode: function(selector1, selector2) {
         // 
