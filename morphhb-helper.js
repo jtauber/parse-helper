@@ -123,8 +123,7 @@ MorphHBHelper = {
                 [".adjective-type", ".gender", ".number", ".state"],
                 [".case", ".person", ".conjunction-type", ".pronoun-type",
                  ".preposition-type", ".definiteness", ".suffix-type",
-                 ".particle-type", ".stem", ".aspect", ".noun-type",
-                 ".particle-type"]
+                 ".particle-type", ".stem", ".aspect", ".noun-type"]
             );
         }
         else if (pos == "C") {
